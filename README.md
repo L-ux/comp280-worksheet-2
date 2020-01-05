@@ -11,6 +11,8 @@ WASD controls ...
 
 They definitely aren't perfect, but they work (most of the time)
 
+There is currently no way to win, but you can still lose :)
+
 
 
 ### old unreal bits
