@@ -41,7 +41,7 @@ public class Player_Script : MonoBehaviour
         // pill time text
         float timedif = Time.time - PillPickupTime;
         if(timedif > PowerPillDuration) timedif = PowerPillDuration;
-        timeTex.text = string.Format("{0:0.00}",(PowerPillDuration-timedif).ToString());
+        timeTex.text = string.Format("{0:0.0}",(PowerPillDuration-timedif));
     }
 
 
@@ -81,19 +81,19 @@ public class Player_Script : MonoBehaviour
     {
         totalScore = pelletScore + killScore;
         scoreTex.text = totalScore.ToString();
-        if (pelletScore > 10) // max score value
+        if (pelletScore >= 244) // max score value
         {
             // win game ?
         }
     }
 
-    int pillstaken = 0;
+    int pillsTaken = 0;
     IEnumerator powerPillTime()
     {
-        pillstaken++;
+        pillsTaken++;
         yield return new WaitForSeconds(PowerPillDuration);
-        pillstaken--;
-        if (pillstaken == 0)
+        pillsTaken--;
+        if (pillsTaken == 0)
         {
             hasPowerPill = false;
             killMulti = 1;

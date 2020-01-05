@@ -15,38 +15,37 @@ public class BasicGhostScript : MonoBehaviour
 
     public Vector3 spawnPos;    // stores starting position upon game start
     
-    public bool freeToGo = false;
-    public float initialWaitTime;
+    public bool freeToGo = false; // freeToGo is false at the start of the game and after dying, so they stay in the cage a little first before entering the arena
+    public float initialWaitTime; // how long this ghost sits around for at the start of the game
 
     // Start is called before the first frame update
     void Start()
     {
-        navMeshAgent = this.GetComponent<NavMeshAgent>();
-        //SetDestination();
-        StartCoroutine(waitScaredChange());
-        spawnPos = transform.position;
-        StartCoroutine(waitBeforeLeaving(initialWaitTime));
+        navMeshAgent = this.GetComponent<NavMeshAgent>();   // grabs own nav agent
+        StartCoroutine(waitScaredChange()); // start coroutine that waits for PowerPill pickup
+        spawnPos = transform.position;  // note the staing position
+        StartCoroutine(waitBeforeLeaving(initialWaitTime)); // 
     }
 
     // Update is called once per frame
     protected virtual void SetDestination()
     {
-        if (playerTransform == null)
+        if (playerTransform == null)    // if player no longer exists (dies) . stop navmesh-ing
         {
             navMeshAgent.enabled = false;
         }
-        else if (!isScared)
+        else if (!isScared) // if chasing - go straight for player
         {
             navMeshAgent.SetDestination(playerTransform.transform.position);
         }
-        else if (isScared)
+        else if (isScared) // if scared - run directly away from player
         {
             Vector3 scaredDestination = transform.position + (transform.position-playerTransform.transform.position);
             navMeshAgent.SetDestination(scaredDestination);
         }
     }
     
-    protected virtual void Update()
+    void Update()
     {
         if(freeToGo)
         {
@@ -65,7 +64,7 @@ public class BasicGhostScript : MonoBehaviour
         freeToGo = false;
         navMeshAgent.enabled = false;
         transform.position = spawnPos; // move it back to its spawn point
-        StartCoroutine(waitBeforeLeaving(5));
+        StartCoroutine(waitBeforeLeaving(2));
     }
 
     IEnumerator waitScaredChange() // coroutine to keep an eye out for Power Pill state
@@ -79,7 +78,7 @@ public class BasicGhostScript : MonoBehaviour
         StartCoroutine(waitScaredChange());
     }
 
-    IEnumerator waitBeforeLeaving(float time)
+    IEnumerator waitBeforeLeaving(float time) // waits for given amount of time, then tells ghost it is free to move n stuff
     {
         yield return new WaitForSeconds(time);
         freeToGo = true;        

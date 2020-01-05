@@ -4421,7 +4421,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 624917c4c068a0543991c9ea6a5cb88c, type: 2}
+  - {fileID: 2100000, guid: 0300e346c9c543047afde6f9a70481ac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4476,12 +4476,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 1741372527}
-  angryMat: {fileID: 2100000, guid: 624917c4c068a0543991c9ea6a5cb88c, type: 2}
+  angryMat: {fileID: 2100000, guid: 0300e346c9c543047afde6f9a70481ac, type: 2}
   scaredMat: {fileID: 2100000, guid: c639c844335f9114ca48bb2239d98bf4, type: 2}
   isScared: 0
   spawnPos: {x: 0, y: 0, z: 0}
   freeToGo: 0
-  initialWaitTime: 12
+  initialWaitTime: 3
 --- !u!1 &323439948
 GameObject:
   m_ObjectHideFlags: 0
@@ -4697,7 +4697,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 325736631}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 302021d3d1747274484940daf19a3bc1, type: 3}
+  m_Script: {fileID: 11500000, guid: fc747cbb562e3954f8db7c4d82880377, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 1741372527}
@@ -7862,7 +7862,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 624917c4c068a0543991c9ea6a5cb88c, type: 2}
+  - {fileID: 2100000, guid: c30050915baa5854a99e6e2040aae65e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7913,16 +7913,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 521623708}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 302021d3d1747274484940daf19a3bc1, type: 3}
+  m_Script: {fileID: 11500000, guid: 710d806ab6f845a43b17c5163683e9ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 1741372527}
-  angryMat: {fileID: 2100000, guid: 624917c4c068a0543991c9ea6a5cb88c, type: 2}
+  angryMat: {fileID: 2100000, guid: c30050915baa5854a99e6e2040aae65e, type: 2}
   scaredMat: {fileID: 2100000, guid: c639c844335f9114ca48bb2239d98bf4, type: 2}
   isScared: 0
   spawnPos: {x: 0, y: 0, z: 0}
   freeToGo: 0
-  initialWaitTime: 4
+  initialWaitTime: 1
 --- !u!1 &534008897
 GameObject:
   m_ObjectHideFlags: 0
@@ -13954,7 +13954,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 624917c4c068a0543991c9ea6a5cb88c, type: 2}
+  - {fileID: 2100000, guid: 24c33595e99980d4bad2584b6fb023f7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14009,12 +14009,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 1741372527}
-  angryMat: {fileID: 2100000, guid: 624917c4c068a0543991c9ea6a5cb88c, type: 2}
+  angryMat: {fileID: 2100000, guid: 24c33595e99980d4bad2584b6fb023f7, type: 2}
   scaredMat: {fileID: 2100000, guid: c639c844335f9114ca48bb2239d98bf4, type: 2}
   isScared: 0
   spawnPos: {x: 0, y: 0, z: 0}
   freeToGo: 0
-  initialWaitTime: 8
+  initialWaitTime: 2
 --- !u!1 &973907785
 GameObject:
   m_ObjectHideFlags: 0
@@ -24271,7 +24271,7 @@ MonoBehaviour:
   charcont: {fileID: 1741372530}
   scoreTex: {fileID: 1297971494}
   timeTex: {fileID: 486971920}
-  PowerPillDuration: 30
+  PowerPillDuration: 10
 --- !u!54 &1741372529
 Rigidbody:
   m_ObjectHideFlags: 0
