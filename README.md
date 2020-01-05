@@ -1,13 +1,14 @@
 # comp280-worksheet-2
 Base repository for COMP280 worksheet 2
 ## Unity project is called 'Pacman thing'
-it aint perfect
-WASD controls
+it aint perfect... 
+WASD controls ...
 
 - Blinky (Red) - Hunts you directly at all times
 - Pinky (Pink) - Tried to ambush by aiming for location in front of you
 - Inky (Blue) - Roams around random waypoints, then hunts you when you get too close. Goes back to roaming when too far from you
 - Clyde (Beige?) - Roams aroud random waypoint, but runs away if you get too close.
+
 They definitely aren't perfect, but they work (most of the time)
 
 
