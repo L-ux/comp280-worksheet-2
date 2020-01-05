@@ -56,7 +56,9 @@
      <Compile Include="Assets\Scripts\Aggresive_Script.cs" />
      <Compile Include="Assets\Scripts\Ambush_Script.cs" />
      <Compile Include="Assets\Scripts\BasicGhostScript.cs" />
+     <Compile Include="Assets\Scripts\Patrol_Script.cs" />
      <Compile Include="Assets\Scripts\Player_Script.cs" />
+     <Compile Include="Assets\Scripts\Random_Script.cs" />
      <Compile Include="Assets\Useless Default Bits\Scripts\SimpleCameraController.cs" />
      <Compile Include="Assets\Useless Default Bits\Tutorial_Info\Scripts\Readme.cs" />
  <Reference Include="Unity.TextMeshPro.Editor">

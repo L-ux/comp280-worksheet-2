@@ -19,7 +19,7 @@ public class BasicGhostScript : MonoBehaviour
     public float initialWaitTime; // how long this ghost sits around for at the start of the game
 
     // Start is called before the first frame update
-    void Start()
+    protected virtual void Start()
     {
         navMeshAgent = this.GetComponent<NavMeshAgent>();   // grabs own nav agent
         StartCoroutine(waitScaredChange()); // start coroutine that waits for PowerPill pickup
@@ -47,22 +47,18 @@ public class BasicGhostScript : MonoBehaviour
     
     void Update()
     {
-        if(freeToGo)
+        if(freeToGo) // if ghosts has got the all clear to leave the cage...
         {
-            navMeshAgent.enabled = true;
+            navMeshAgent.enabled = true; // ... make sure to enable its navmesh again
             SetDestination();
         }
-        // else
-        // {
-        //     navMeshAgent.enabled = false;
-        // }
     }
 
 
     public void doDead()
     {
         freeToGo = false;
-        navMeshAgent.enabled = false;
+        navMeshAgent.enabled = false; // disable navmesh before moving its location
         transform.position = spawnPos; // move it back to its spawn point
         StartCoroutine(waitBeforeLeaving(2));
     }
